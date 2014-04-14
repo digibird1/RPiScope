@@ -1,0 +1,12 @@
+KERNEL_TREE=/home/imp/electronics/RaspberryPi/Kernel/linux-rpi-3.11.y
+CCPREFIX=/home/imp/electronics/RaspberryPi/Kernel/tools-master/arm-bcm2708/arm-bcm2708-linux-gnueabi/bin/arm-bcm2708-linux-gnueabi-
+
+obj-m += Scope-drv.o
+
+all:
+	make -C ${KERNEL_TREE} ARCH=arm CROSS_COMPILE=${CCPREFIX} M=$(PWD) modules
+
+
+
+
+
