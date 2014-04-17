@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Written by Daniel Pelikan
+#http://digibird1.wordpress.com/
+
+
 FV=`zgrep "* firmware as of" /usr/share/doc/raspberrypi-bootloader/changelog.Debian.gz \
 | head -1 | awk '{ print $5 }'`
 
